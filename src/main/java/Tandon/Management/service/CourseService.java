@@ -38,9 +38,9 @@ public class CourseService {
         Course course = courseRepository.findById(id).get();
 
         course.setCourseId(newCourse.getCourseId());
-        course.setDescription(newCourse.getDescription());
-        course.setDuration(newCourse.getDuration());
-        course.setTitle(newCourse.getTitle());
+        course.setCourseDescription(newCourse.getCourseDescription());
+        course.setCourseDuration(newCourse.getCourseDuration());
+        course.setCourseTitle(newCourse.getCourseTitle());
         course.setStudentList(newCourse.getStudentList());
 
         courseRepository.save(course);

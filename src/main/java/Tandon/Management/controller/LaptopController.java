@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.*;
 
 @RestController
+@RequestMapping(value = "/laptop/")
 public class LaptopController {
     @Autowired
     private LaptopService laptopService;
@@ -18,14 +19,14 @@ public class LaptopController {
     }
 
     //get by id
-    @GetMapping("/findbyid/{id}")
+    @GetMapping("/findById/{id}")
     public Laptop getLaptopById(@PathVariable int id) {
         return laptopService.getLaptopById(id);
     }
 
 
     //update
-    @PutMapping("/updatelaptop/{id}")
+    @PutMapping("/updateLaptop/{id}")
     public void updateLaptop(@PathVariable int id,@RequestBody Laptop newLaptop) {
         laptopService.updateLaptopById(id, newLaptop);
     }
@@ -39,7 +40,7 @@ public class LaptopController {
 
     //get all
 
-    @GetMapping("/findall")
+    @GetMapping("/findAll")
     public List<Laptop> getAllLaptops(){
         return laptopService.getAllLaptop();
     }

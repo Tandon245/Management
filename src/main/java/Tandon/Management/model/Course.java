@@ -25,11 +25,11 @@ public class Course {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int courseId;
     @Column(name="course_title")
-    private String title;
+    private String courseTitle;
     @Column(name="course_description")
-    private String description;
+    private String courseDescription;
     @Column(name="course_duration")
-    private String duration;
+    private String courseDuration;
     @ManyToMany
     private List<Student> studentList = new ArrayList<>();
 

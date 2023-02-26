@@ -37,11 +37,11 @@ public class BookService {
 
     public void updateBookById(int id, Book newBook) {
         Book books = bookRepository.findById(id).get();
-        books.setAuthor(newBook.getAuthor());
+        books.setBookAuthor(newBook.getBookAuthor());
         books.setBookId(newBook.getBookId());
-        books.setDescription(newBook.getDescription());
-        books.setPrice(newBook.getPrice());
-        books.setTitle(newBook.getTitle());
+        books.setBookDescription(newBook.getBookDescription());
+        books.setBookPrice(newBook.getBookPrice());
+        books.setBookTitle(newBook.getBookTitle());
         books.setStudent(newBook.getStudent());
 
         bookRepository.save(books);

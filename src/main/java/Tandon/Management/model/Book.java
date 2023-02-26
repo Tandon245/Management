@@ -21,13 +21,13 @@ public class Book {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int bookId;
     @Column(name="book_title")
-    private String title;
+    private String bookTitle;
     @Column(name="book_author")
-    private String author;
+    private String bookAuthor;
     @Column(name="book_description")
-    private String description;
+    private String bookDescription;
     @Column(name="book_price")
-    private String price;
+    private String bookPrice;
     @ManyToOne
     private Student student;
 

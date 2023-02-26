@@ -5,34 +5,37 @@ import Tandon.Management.model.Course;
 import Tandon.Management.service.CourseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
 import java.util.*;
+
 @RestController
+@RequestMapping("/course/")
 public class CourseController {
     @Autowired
     private CourseService courseService;
 
-    @PostMapping("/add-course")
+    @PostMapping("/addCourse")
     public Course addBook(@RequestBody Course course) {
         return courseService.addCourse(course);
     }
 
-    @GetMapping("/get-course/{id}")
+    @GetMapping("/getCourse/{id}")
     public Course getCourseById(@PathVariable int id) {
         return courseService.getCourseById(id);
     }
 
-    @PutMapping("/update-course/{id}")
-    public void updateCourse(@PathVariable int id,@RequestBody Course newCourse) {
+    @PutMapping("/updateCourse/{id}")
+    public void updateCourse(@PathVariable int id, @RequestBody Course newCourse) {
         courseService.updateCourseById(id, newCourse);
     }
 
-    @DeleteMapping("delete-course/{id}")
+    @DeleteMapping("deleteCourse/{id}")
     public void deleteCourse(@PathVariable int id) {
         courseService.deleteCourseById(id);
     }
 
-    @GetMapping("/get-all-courses")
-    public List<Course> getAllCourses(){
+    @GetMapping("/getAllCourses")
+    public List<Course> getAllCourses() {
         return courseService.getAllCourse();
     }
 

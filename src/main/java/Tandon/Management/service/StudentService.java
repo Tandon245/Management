@@ -25,13 +25,13 @@ public class StudentService {
     }
     public void updateStudentById(int id, Student newStudent) {
         Student stud = studentRepository.findById(id).get();
-        stud.setId(newStudent.getId());
-        stud.setName(newStudent.getName());
-        stud.setAge(newStudent.getAge());
-        stud.setBranch(newStudent.getBranch());
-        stud.setDepartment(newStudent.getDepartment());
+        stud.setStudentId(newStudent.getStudentId());
+        stud.setStudentName(newStudent.getStudentName());
+        stud.setStudentAge(newStudent.getStudentAge());
+        stud.setStudentBranch(newStudent.getStudentBranch());
+        stud.setStudentDepartment(newStudent.getStudentDepartment());
         stud.setPhoneNumber(newStudent.getPhoneNumber());
-        stud.setAddress(newStudent.getAddress());
+        stud.setStudentAddress(newStudent.getStudentAddress());
 
         studentRepository.save(stud);
     }

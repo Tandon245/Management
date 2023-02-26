@@ -34,11 +34,11 @@ public class LaptopService {
 
     public void updateLaptopById(int id, Laptop newLaptop) {
         Laptop lap = laptopRepository.findById(id).get();
-        lap.setBrand(newLaptop.getBrand());
+        lap.setLaptopBrand(newLaptop.getLaptopBrand());
         lap.setLaptopId(newLaptop.getLaptopId());
-        lap.setName(newLaptop.getName());
+        lap.setLaptopName(newLaptop.getLaptopName());
         lap.setStudent(newLaptop.getStudent());
-        lap.setPrice(newLaptop.getPrice());
+        lap.setLaptopPrice(newLaptop.getLaptopPrice());
         laptopRepository.save(lap);
 
     }

@@ -19,19 +19,20 @@ import lombok.NoArgsConstructor;
 public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private int studentId;
     @Column(name="student_name")
-    private String name;
+    private String studentName;
     @Column(name="student_age")
-    private String age;
-    @Column(name="phonenumber")
+    private String studentAge;
+    @Column(name="phone_number")
     private String phoneNumber;
     @Column(name="student_branch")
-    private String branch;
+    private String studentBranch;
     @Column(name="student_dept")
-    private String department;
+    private String studentDepartment;
 
     @Embedded
-    private Address address;
+    private Address studentAddress;
+
 
 }

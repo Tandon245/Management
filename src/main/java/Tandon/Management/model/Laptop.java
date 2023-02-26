@@ -22,11 +22,11 @@ public class Laptop {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int laptopId;
     @Column(name="laptop_name")
-    private String name;
+    private String laptopName;
     @Column(name="laptop_brand")
-    private String brand;
+    private String laptopBrand;
     @Column(name="laptop_price")
-    private int price;
+    private int laptopPrice;
 
     @OneToOne
     private Student student;
